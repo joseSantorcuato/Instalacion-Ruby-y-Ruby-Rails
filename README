@@ -53,3 +53,9 @@ gem install rails -v 5.0.1
 rbenv rehash
 
 rails -v
+
+Para conectar con bases de datos, para ruby la mysql2 para rails mysql
+
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+
+gem install mysql2 -v 0.4.4

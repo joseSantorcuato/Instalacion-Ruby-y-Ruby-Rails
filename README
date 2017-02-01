@@ -1,0 +1,55 @@
+Instalación Ruby y Ruby Rails
+José Santorcuato Tapia
+santorcuato76@gmail.com
+Chile 2017
+
+Primero instalaré solo Ruby, en su versión 2.4.0
+
+sudo apt-get update
+
+sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs
+
+Es importante instalar estas dependencias antes de instalar Ruby, de lo contrario no encuentra gemas o dependencias.
+
+sudo apt-get update
+
+sudo apt-get install rbenv
+
+cd
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+exec $SHELL
+
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+exec $SHELL
+
+rbenv install 2.4.0
+rbenv global 2.4.0
+ruby -v
+
+gem install bundler
+
+rbenv rehash
+
+git config --global color.ui true
+git config --global user.name "tuUsuario"
+git config --global user.email "tumail@servicio.com"
+ssh-keygen -t rsa -b 4096 -C "tumail@servicio.com"
+
+cat ~/.ssh/id_rsa.pub
+
+Copiar SHA a Github (agregar ssh)
+
+ssh -T git@github.com
+
+sudo apt-get install -y nodejs
+
+Dirá que está en su versión última, es solo para confirmar
+
+gem install rails -v 5.0.1
+
+rbenv rehash
+
+rails -v

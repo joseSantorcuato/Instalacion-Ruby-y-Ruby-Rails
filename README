@@ -50,6 +50,24 @@ Dirá que está en su versión última, es solo para confirmar
 
 gem install rails -v 5.0.1
 
+/*Solo para RPI
+
+En este punto en Raspberry PI puede arrojar el error
+
+ERROR:  Error installing nokogiri:
+	invalid gem: package is corrupt, exception while verifying: undefined method `size' for nil:NilClass (NoMethodError) in /home/tuUsuario/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/cache/nokogiri-1.7.0.1.gem
+
+Lo resuelves de esta manera
+
+rm /home/tuUsuario/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/cache/nokogiri-1.7.0.1.gem
+
+gem install nokogiri
+
+gem install rails -v 5.0.1
+
+*/
+
+
 rbenv rehash
 
 rails -v

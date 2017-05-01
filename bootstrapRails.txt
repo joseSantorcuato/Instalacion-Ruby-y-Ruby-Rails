@@ -18,6 +18,8 @@ En la vista index.html.erb
 <!DOCTYPE html>
 <html>
   <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Preba</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all',
@@ -57,6 +59,8 @@ Editar  inicio.scss
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 //Agregar estilos
 
@@ -76,6 +80,22 @@ textarea {
   text-align: center;
 }
 
+En application.js
 
+Agregar librerías js a utilizar
 
+//= require jquery
+//= require jquery_ujs
+//= require turbolinks
+//= require_tree .
+//= flotr2.min
+//= flotr2
+//= require bootstrap-sprockets
 
+en config/production.rb
+
+config.assets.compile = true
+
+en locales/application.rb agregar fonts
+
+config.assets.paths << Rails.root.join('app', 'assets', 'fonts')

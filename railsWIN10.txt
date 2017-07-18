@@ -1,0 +1,178 @@
+Manual  de instalación RAILS en WIN10.
+
+Notas preliminares:
+
+Tengo instalado  ruby 2.3.3p222 (2016-11-21 revision 56859) [x64-mingw32] con el devKit correspondiente y las gemas actualizadas.
+
+También tengo en mi máquina los motores de base de datos  PG, MYSQL, SQLEXPRESS, es importante señalar que muchos errores se comenten al no considerar las notas preliminares que te señalo.
+
+Las gemas presnetes antes de la instalación de Rails
+
+
+*** LOCAL GEMS ***
+
+actioncable (5.1.1)
+actionmailer (5.1.1, 3.2.22.5)
+actionpack (5.1.1, 3.2.22.5)
+actionview (5.1.1)
+activejob (5.1.1)
+activemodel (5.1.1, 3.2.22.5)
+activerecord (5.1.1, 3.2.22.5)
+activerecord-sqlserver-adapter (5.1.1)
+activeresource (3.2.22.5)
+activesupport (5.1.1, 3.2.22.5)
+addressable (2.5.1)
+afm (0.2.2)
+akami (1.3.1)
+arel (8.0.0, 3.0.3)
+Ascii85 (1.0.2)
+bigdecimal (1.2.8)
+builder (3.2.3, 3.0.4)
+bundler (1.15.1)
+cancan (1.6.10)
+capybara (2.14.3)
+childprocess (0.7.0)
+chipmunk (6.1.3.4)
+concurrent-ruby (1.0.5)
+cucumber (2.4.0)
+cucumber-core (1.5.0)
+cucumber-wire (0.0.1)
+dbd-odbc (0.2.5)
+dbi (0.4.5)
+deprecated (2.0.1)
+did_you_mean (1.0.0)
+diff-lcs (1.3)
+docx (0.2.07)
+domain_name (0.5.20170404)
+erubi (1.6.0)
+erubis (2.7.0)
+event_spitter (0.5.0)
+ffi (1.9.18 x64-mingw32)
+geocode (0.2.1)
+geocoder (1.4.4)
+gherkin (4.1.3)
+globalid (0.4.0)
+gosu (0.12.1 x64-mingw32)
+gosu-examples (1.0.4)
+gruff (0.7.0)
+gyoku (1.3.1)
+hashery (2.1.2)
+hike (1.2.3)
+http-cookie (1.0.3)
+httpi (2.4.2)
+i18n (0.8.4)
+io-console (0.4.5)
+journey (1.0.4)
+json (1.8.3)
+loofah (2.0.3)
+mail (2.6.6, 2.5.5)
+method_source (0.8.2)
+mime-types (3.1, 1.25.1)
+mime-types-data (3.2016.0521)
+mini_portile2 (2.2.0)
+minitest (5.8.5)
+multi_json (1.12.1)
+multi_test (0.1.2)
+mysql2 (0.4.6 x64-mingw32)
+net-telnet (0.1.1)
+netrc (0.11.0)
+nio4r (2.1.0)
+nokogiri (1.8.0 x64-mingw32)
+nori (2.6.0)
+ocra (1.3.8)
+opengl (0.10.0 x64-mingw32)
+pdf-core (0.7.0)
+pdf-reader (2.0.0)
+pg (0.21.0 x64-mingw32)
+polyglot (0.3.5)
+power_assert (0.2.6)
+prawn (2.2.2)
+pretender (0.3.1)
+psych (2.1.0)
+public_suffix (2.0.5)
+rack (2.0.3, 1.4.7)
+rack-cache (1.7.0)
+rack-ssl (1.3.4)
+rack-test (0.6.3)
+rails (5.1.1)
+rails-dom-testing (2.0.3)
+rails-html-sanitizer (1.0.3)
+railties (5.1.1)
+rake (10.4.2)
+rdoc (4.2.1)
+rest-client (2.0.2 x64-mingw32)
+rmagick (2.16.0)
+rspec (3.6.0)
+rspec-core (3.6.0)
+rspec-expectations (3.6.0)
+rspec-mocks (3.6.0)
+rspec-support (3.6.0)
+ruby-odbc (0.99998)
+ruby-ole (1.2.12.1)
+ruby-rc4 (0.1.5)
+rubygems-update (2.6.12)
+rubyzip (1.2.1, 1.2.0, 1.1.7)
+sablon (0.0.21)
+savon (2.11.1)
+selenium-webdriver (3.4.0)
+socksify (1.7.1)
+spreadsheet (1.1.4)
+sprockets (3.7.1, 2.2.3)
+sprockets-rails (3.2.0)
+test-unit (3.1.5)
+thor (0.19.4)
+thread_safe (0.3.6)
+tilt (1.4.1)
+tiny_tds (1.3.0 x64-mingw32)
+treetop (1.4.15)
+trollop (2.1.2)
+ttfunk (1.5.1)
+tzinfo (1.2.3, 0.3.53)
+unf (0.1.4)
+unf_ext (0.0.7.4 x64-mingw32)
+user_impersonate2 (0.11.0)
+wasabi (3.5.0)
+watir (6.3.0)
+websocket (1.2.4)
+websocket-driver (0.6.5)
+websocket-extensions (0.1.2)
+write_xlsx (0.85.1)
+xpath (2.1.0)
+zip-zip (0.3)
+
+
+
+INSTALACIÓN
+
+1. En la consola escribir
+
+gem install rails
+
+El procesos puede tardar, depende de tu conexión.
+
+Luego finalizado el proceso de instalación nuevamente en consola
+
+rails -v
+
+A mi me devuelve
+
+Rails 5.1.2
+
+Te recomiendo crear una carpeta para alojar tus proyectos
+
+mkdir Proyectos
+
+cd Proyectos
+
+rails new nombreDelProyecto
+
+
+Ingresa a la carpeta de nombreDelProyecto y ejecuta en terminal
+
+gem install bundler
+
+Luego
+
+rails s
+
+Ingresa a localhost:3000
